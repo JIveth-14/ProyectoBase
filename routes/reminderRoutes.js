@@ -1,10 +1,10 @@
 const express= require('express');
-const { getAllBooks, createBook, updateBook,deleteBook } = require('../controllers/booksController');
+const { getAllreminders, createreminder, updatereminder, deletereminder} = require('../controllers/reminderController');
 const router= express.Router();
 
-router.get('/reminders', getAllBooks);
-router.post('/reminder', createBook);
-router.put("/reminders/:id", updateBook);
-router.delete("/reminders/:id", deleteBook);
+router.get('/reminders', getAllreminders);
+router.post('/newreminders', createreminder);
+router.put("/reminders/:id", updatereminder);
+router.delete("/reminders/:id", deletereminder);
 
 module.exports = router;
